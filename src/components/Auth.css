@@ -1,0 +1,151 @@
+/* Auth.css (или ваш файл со стилями) */
+
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Цвет фона, как на изображении */
+  }
+  
+  .auth {
+    text-align: center;
+  }
+  
+  .auth img.logo {
+    margin-bottom: 20px; /* Отступ под логотипом */
+    /* Добавьте другие стили для логотипа, если необходимо */
+  }
+  
+  /* Стиль кнопки "Войти" (или другой элемент, который открывает модальное окно) */
+  .auth button {
+    padding: 10px 20px;
+    background-color: #000; /* Черный цвет */
+    color: #fff; /* Белый текст */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px; /* Отступ перед модальными окнами */
+  }
+  
+  .modal {
+    display: flex;
+    position: fixed; /* Фиксированное позиционирование для отображения поверх всего */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Убедитесь, что модальное окно находится поверх всего */
+  }
+  
+  .modal-content {
+    background-color: #fff; /* Белый фон */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Адаптивность */
+    max-width: 400px; /* Максимальная ширина */
+    position: relative; /* Для позиционирования крестика */
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+  }
+  
+  .modal-content .close:hover {
+    color: #000;
+  }
+  
+  .modal-content form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-content label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .modal-content input[type="text"],
+  .modal-content input[type="password"],
+  .modal-content input[type="email"] { /*  Добавлено: style для email */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none; /* Убираем обводку при фокусе */
+  }
+  
+  .modal-content button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .modal-content button[type="submit"]:hover {
+    background-color: #333;
+  }
+  
+  .modal-content p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .modal-content a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .modal-content a:hover {
+    text-decoration: underline;
+  }
+  
+  .modal-content .error {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  /* Медиа-запросы для адаптивности */
+  @media (max-width: 600px) {
+    .modal-content {
+      width: 95%;
+      padding: 20px;
+    }
+  
+    .modal-content h2 {
+      font-size: 20px;
+    }
+  
+    .modal-content input[type="text"],
+    .modal-content input[type="password"],
+    .modal-content input[type="email"] {
+      font-size: 14px;
+    }
+  
+    .modal-content button[type="submit"] {
+      font-size: 14px;
+    }
+  }

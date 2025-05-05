@@ -1,0 +1,84 @@
+/* Модальное окно (контейнер) */
+.Modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Shadow like in the image */
+    width: 400px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's on top */
+    overflow: hidden; /*  To prevent content overflow */
+    border: none;
+    outline: none;
+}
+
+/* Затемнение фона (overlay) */
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Below the modal, but above content */
+}
+
+/* Заголовок модального окна */
+.Modal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Center the title */
+}
+
+/* Стиль для меток (label) */
+.Modal label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    /* Add more styling if needed */
+}
+
+/* Стиль для полей ввода (input, textarea, select) */
+.Modal input[type="text"],
+.Modal input[type="date"],
+.Modal textarea,
+.Modal select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+.Modal input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Стиль для кнопок */
+.Modal button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 0.5rem; /* Space between buttons */
+    transition: background-color 0.2s ease;
+}
+
+.Modal button[type="submit"] {
+    background-color: black;
+    color: white;
+}
+
+.Modal button[type="button"] {
+    background-color: #ddd;
+    color: #333;
+}
+
+.Modal button:hover {
+    opacity: 0.8;
+}
